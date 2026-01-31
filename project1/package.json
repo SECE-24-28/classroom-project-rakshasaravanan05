@@ -1,0 +1,35 @@
+{
+  "name": "campus-issue-reporting-system",
+  "version": "1.0.0",
+  "description": "A MERN Stack web application for reporting and managing campus issues",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "install-server": "cd server && npm install",
+    "install-client": "cd client && npm install",
+    "install-all": "npm run install-server && npm run install-client",
+    "create-admin": "cd server && node createAdmin.js",
+    "add-sample-data": "cd server && node addSampleData.js",
+    "clear-issues": "cd server && node clearIssues.js",
+    "add-mixed-status": "cd server && node addMixedStatusIssues.js",
+    "health-check": "node healthCheck.js",
+    "setup": "npm run install-all && npm run create-admin && npm run add-mixed-status"
+  },
+  "keywords": [
+    "mern",
+    "react",
+    "nodejs",
+    "mongodb",
+    "express",
+    "campus",
+    "issue-tracking"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
